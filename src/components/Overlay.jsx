@@ -60,7 +60,7 @@ export const Overlay = () => {
 							<br />
 							If you require my services, reach me out via{" "}
 							<a
-								href="satviksrivastava7@gmail.com"
+								href="mailto:satviksrivastava7@gmail.com"
 								target="_blank"
 							>
 								email.
