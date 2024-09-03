@@ -63,9 +63,9 @@ export const Experience = () => {
 	const textSections = useMemo(() => {
 		return [
 			{
-				cameraRailDist: -1,
+				cameraRailDist: 1,
 				position: new Vector3(
-					curvePoints[1].x - 3,
+					curvePoints[1].x + 2,
 					curvePoints[1].y,
 					curvePoints[1].z
 				),
@@ -76,7 +76,7 @@ export const Experience = () => {
 			{
 				cameraRailDist: -1.5,
 				position: new Vector3(
-					curvePoints[2].x + 2,
+					curvePoints[2].x - 4,
 					curvePoints[2].y,
 					curvePoints[2].z
 				),
@@ -94,9 +94,9 @@ export const Experience = () => {
 				subtitle: `With my foundations in design and UI/UX, I focus on developing websites that serve functionalities in the most eye pleasing manner.`,
 			},
 			{
-				cameraRailDist: 1,
+				cameraRailDist: -1.5,
 				position: new Vector3(
-					curvePoints[4].x - 2,
+					curvePoints[4].x - 4,
 					curvePoints[4].y,
 					curvePoints[4].z
 				),

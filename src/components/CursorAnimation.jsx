@@ -6,7 +6,17 @@ const CursorAnimation = () => {
 	const [cursorType, setCursorType] = useState("default");
 	const spinnerRef = useRef(null);
 
+	const isMobileDevice = () => {
+		return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		);
+	};
+
 	useEffect(() => {
+		if (isMobileDevice()) {
+			return;
+		}
+
 		const handleMouseMove = (e) => {
 			if (spinnerRef.current) {
 				spinnerRef.current.style.left = `${e.pageX}px`;
@@ -36,6 +46,10 @@ const CursorAnimation = () => {
 			document.removeEventListener("mouseleave", handleMouseLeave, true);
 		};
 	}, []);
+
+	if (isMobileDevice()) {
+		return null;
+	}
 
 	return (
 		<div ref={spinnerRef} className="cursor-animation">
